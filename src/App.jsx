@@ -6,7 +6,7 @@ import {Hero,PopularFilms,BestMovie} from './sections/index'
 function App() {
 
   return (
-    <main className='relative w-4/5 mx-auto my-24 flex flex-col'>
+    <main className='relative w-4/5 mx-auto my-16 flex flex-col'>
       <Nav/>
     <section className='relative'>
       <Hero/>

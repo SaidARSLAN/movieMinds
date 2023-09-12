@@ -10,11 +10,12 @@ export default {
         mindBlack : "#222831",
         mindGray : "#393E46",
         mindOrange : "#D65A31",
-        mindWhite : "#EEEEEE"
+        mindWhite : "#EEEEEE",
+        mindGradient : "#080808",
       },
       fontFamily : {
         montserrat : "'Montserrat', sans-serif",
-        poppins : "''Poppins', sans-serif;"
+        poppins : "'Poppins', sans-serif;"
       }
     },
   },

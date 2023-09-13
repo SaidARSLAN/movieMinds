@@ -8,8 +8,6 @@ const API_KEY = "46b89186ed58fd640471849b9e20fc42";
 export function Provider ({children}) {
     const [movies, setMovies] = useState([])
     const [apiControl,setApiControl] = useState(false);
-    const [currentPage,setCurrentPage] = useState(1);
-    const [moviePerPage,setMoviePerPage] = useState(1);
     const [currentIdx,setCurrentIdx] = useState(1);
     const [movie,setMovie] = useState({})
     const sendAPI = async () => {
@@ -30,17 +28,35 @@ export function Provider ({children}) {
         sendAPI();
     },[])
 
-    const indexOfLastMovie = currentPage * moviePerPage;
-    const indexOfFirstMovie = indexOfLastMovie - moviePerPage;
-    const currentMovies = movies.slice(indexOfFirstMovie,indexOfLastMovie);
     
+
+    
+
+
     const handleNext = () => {
-        setCurrentIdx(currentIdx + 1);
-        setMovie(movies[currentIdx]);
+        if (currentIdx < movies.length) {
+            setCurrentIdx(currentIdx + 1);
+            setMovie(movies[currentIdx]);
+        }
+        else {
+            setCurrentIdx(0);
+        }
+       
+    }
+    const handleBack = () => {
+        if (currentIdx > 0) {
+            setCurrentIdx(currentIdx - 1);
+            setMovie(movies[currentIdx]);
+        }
+        else {
+            setCurrentIdx(movies.length -1)
+        }
+       
     }
 
+
     return (
-        <GlobalContext.Provider value={{movies,apiControl,currentMovies,handleNext,movie,apiControl}}>
+        <GlobalContext.Provider value={{movies,apiControl,handleNext,movie,apiControl,handleBack}}>
             {children}
         </GlobalContext.Provider>
     )

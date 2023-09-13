@@ -2,6 +2,7 @@ import './App.css'
 import Footer from './components/Footer'
 import Nav from './components/Nav'
 import { Provider } from './context/MainContext'
+import Recommendations from './sections/Recommendations'
 import {Hero,PopularFilms,BestMovie} from './sections/index'
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
     </section>
     <section className='relative'>
       <PopularFilms />
+    </section>
+    <section className=''>
+      <Recommendations />
     </section>
     <section className='relative'>
       <BestMovie />

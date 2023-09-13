@@ -10,7 +10,7 @@ const Nav = () => {
             </div>
             <div className='hidden items-center lg:flex lg:flex-1 lg:gap-8 lg:text-lg font-montserrat'>
                 {navLinks.map((link,index) => {
-                    return (<a href="" key={index} className='text-mindWhite lg:hover:text-mindOrange duration-200 whitespace-nowrap'>{link}</a>) 
+                    return (<a href={link.id} key={index} className='text-mindWhite lg:hover:text-mindOrange duration-200 whitespace-nowrap'>{link.name}</a>) 
                 })}
             </div>
             <div className='flex flex-col space-y-[8px] cursor-pointer group lg:hidden'>

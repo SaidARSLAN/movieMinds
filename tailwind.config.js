@@ -16,7 +16,16 @@ export default {
       fontFamily : {
         montserrat : "'Montserrat', sans-serif",
         poppins : "'Poppins', sans-serif;"
-      }
+      },
+      keyframes: {
+        fadeEffect : {
+          "0%" : {opacity : '0'},
+          "100%" : {opacity : '1'} 
+        },
+      },
+      animation : {
+        fade : "fadeEffect 1s ease"
+      },
     },
   },
   plugins: [],

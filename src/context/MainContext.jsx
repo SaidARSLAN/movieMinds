@@ -10,11 +10,15 @@ export function Provider ({children}) {
     const [apiControl,setApiControl] = useState(false);
     const [currentPage,setCurrentPage] = useState(1);
     const [moviePerPage,setMoviePerPage] = useState(1);
+    const [currentIdx,setCurrentIdx] = useState(1);
+    const [movie,setMovie] = useState({})
     const sendAPI = async () => {
         try {
+            setApiControl(true);
             const request = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`);
             setMovies(request.data.results);
-            setApiControl(true);
+            setApiControl(false)
+            setMovie(request.data.results[0]);
         }
         catch (err) {
             console.log(err);
@@ -30,9 +34,13 @@ export function Provider ({children}) {
     const indexOfFirstMovie = indexOfLastMovie - moviePerPage;
     const currentMovies = movies.slice(indexOfFirstMovie,indexOfLastMovie);
     
- 
+    const handleNext = () => {
+        setCurrentIdx(currentIdx + 1);
+        setMovie(movies[currentIdx]);
+    }
+
     return (
-        <GlobalContext.Provider value={{movies,apiControl,currentMovies}}>
+        <GlobalContext.Provider value={{movies,apiControl,currentMovies,handleNext,movie,apiControl}}>
             {children}
         </GlobalContext.Provider>
     )

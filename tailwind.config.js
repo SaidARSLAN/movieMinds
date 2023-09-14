@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      brightness: {
+          5 : '.05',
+          10 : '.10',
+          25 : '.25'
+      },
       colors : {
         mindBlack : "#222831",
         mindGray : "#393E46",

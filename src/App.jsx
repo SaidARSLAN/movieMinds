@@ -4,6 +4,7 @@ import Nav from './components/Nav'
 import { Provider } from './context/MainContext'
 import Recommendations from './sections/Recommendations'
 import {Hero,PopularFilms,BestMovie} from './sections/index'
+import Overlay from './components/Overlay'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <Provider>
     <main className='relative w-4/5 mx-auto my-16 flex flex-col'>
       <Nav/>
+      <Overlay />
     <section className='relative'>
       <Hero/>
     </section>

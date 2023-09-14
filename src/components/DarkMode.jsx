@@ -3,9 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useRef } from 'react'
 
 
-
-
-const ControlDark = () => {
+const DarkMode = () => {
 
     const moonRef = useRef();
     const sunRef = useRef();
@@ -30,19 +28,17 @@ const ControlDark = () => {
 
   return (
     <div>
-        <div className='absolute hidden -top-[40px] right-1 text-black z-[200] cursor-pointer hover:text-mindGray text-2xl duration-300' id='moon' ref={moonRef} onClick={handleDark}>
-        <FontAwesomeIcon icon={faMoon}>
-        </FontAwesomeIcon>
-        </div>
-        <div className='absolute  -top-[40px] right-1 text-white z-[200] cursor-pointer hover:text-mindGray text-2xl duration-300' id="sun" ref={sunRef} onClick={handleSun}>
-        <FontAwesomeIcon icon={faSun}>
+    <div className='absolute hidden -top-[40px] right-1 text-black z-[200] cursor-pointer hover:text-mindGray text-2xl duration-300' id='moon' ref={moonRef} onClick={handleDark}>
+    <FontAwesomeIcon icon={faMoon}>
+    </FontAwesomeIcon>
+    </div>
+    <div className='absolute  -top-[40px] right-1 text-white z-[200] cursor-pointer hover:text-mindGray text-2xl duration-300' id="sun" ref={sunRef} onClick={handleSun}>
+    <FontAwesomeIcon icon={faSun}>
 
-        </FontAwesomeIcon>
-    </div>
-    
-        
-    </div>
+    </FontAwesomeIcon>
+</div>
+</div>
   )
 }
 
-export default ControlDark
+export default DarkMode

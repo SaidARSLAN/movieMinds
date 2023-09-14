@@ -4,7 +4,7 @@ const Recommendations = () => {
   return (
     <section id='recommendation' className='mt-28 flex-col lg:flex-row lg:mt-32'>
             <h3 className='text-xl font-montserrat text-mindOrange tracking-wider lg:text-8xl text-center mb-8 lg:mb-20'>COMING SOON</h3>
-            <div className='flex flex-col lg:flex-row'>
+            <div className='flex flex-col lg:flex-row  overflow-x-hidden'>
             <div className='flex-col'>
             <div className='flex flex-col space-y-2'>
                 <h1 className='text-4xl font-montserrat text-black dark:text-mindWhite lg:text-6xl w-2/5'>Movie Recommendation <span className='text-mindOrange'>Engine</span></h1>

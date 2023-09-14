@@ -1,4 +1,4 @@
-import { faChessKnight, faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useRef } from 'react'
 

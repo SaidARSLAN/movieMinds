@@ -5,12 +5,14 @@ import { Provider } from './context/MainContext'
 import Recommendations from './sections/Recommendations'
 import {Hero,PopularFilms,BestMovie} from './sections/index'
 import Overlay from './components/Overlay'
+import ControlDark from './components/controlDark'
 
 function App() {
 
   return (
     <Provider>
-    <main className='relative w-4/5 mx-auto my-16 flex flex-col'>
+    <main className='relative w-4/5 mx-auto my-16 flex flex-col dark' id='main'>
+      <ControlDark />
       <Nav/>
       <Overlay />
     <section className='relative'>

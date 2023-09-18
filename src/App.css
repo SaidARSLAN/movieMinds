@@ -1,7 +1,10 @@
-body {
+body  {
   background-color: #000;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   scroll-behavior:smooth;
+}
+html {
+  scroll-behavior: smooth;
 }

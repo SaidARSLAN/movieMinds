@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import GlobalContext from '../context/MainContext'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import { faArrowLeft,faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft,faArrowRight,faSpinner } from '@fortawesome/free-solid-svg-icons'
 const PopularFilms = () => {
   const {handleNext,movie,apiControl,handleBack} = useContext(GlobalContext);
   return (
     <section id="films" className='text-white grid grid-cols-1 space-y-4 relative -mt-[185px] lg:-mt-[220px] z-10'>
-      {apiControl ? <h1 className='text-9xl text-center'>Loading</h1>:
+      {apiControl ? <FontAwesomeIcon icon={faSpinner} className='text-4xl text-center'></FontAwesomeIcon>:
       <div>
               <div className='relative group'>
                       <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} className='object-contain group-hover:opacity-20 duration-500 z-10 animate-fade' />

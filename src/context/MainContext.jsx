@@ -16,6 +16,7 @@ export function Provider ({children}) {
             const request = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`);
             setMovies(request.data.results);
             setApiControl(false)
+            console.log(request.data);
             setMovie(request.data.results[0]);
         }
         catch (err) {
@@ -53,7 +54,6 @@ export function Provider ({children}) {
         }
        
     }
-
 
     return (
         <GlobalContext.Provider value={{movies,apiControl,handleNext,movie,apiControl,handleBack}}>

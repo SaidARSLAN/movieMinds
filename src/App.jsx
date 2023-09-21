@@ -11,10 +11,8 @@ function App() {
 
   return (
     <Provider>
-    <main className='relative w-4/5 mx-auto my-16 flex flex-col dark' id='main'>
-      <DarkMode />
+    <main className='relative w-full lg:w-4/5 lg:mx-auto flex flex-col dark' id='main'>
       <Nav/>
-      <Overlay />
     <section className='relative'>
       <Hero/>
     </section>

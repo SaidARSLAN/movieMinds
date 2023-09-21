@@ -2,22 +2,20 @@ import React from 'react'
 import { batman, endgame, horror, thor } from '../contents'
 const Recommendations = () => {
   return (
-    <section id='recommendation' className='mt-28 flex-col lg:flex-row lg:mt-32'>
-            <h3 className='text-xl font-montserrat text-mindOrange tracking-wider lg:text-8xl text-center mb-8 lg:mb-20'>COMING SOON</h3>
-            <div className='flex flex-col lg:flex-row  overflow-x-hidden'>
-            <div className='flex-col'>
-            <div className='flex flex-col space-y-2'>
-                <h1 className='text-4xl font-montserrat text-black dark:text-mindWhite lg:text-6xl w-2/5'>Movie Recommendation <span className='text-mindOrange'>Engine</span></h1>
-                <p className='text-sm font-poppins text-black dark:text-gray-400 lg:text-lg lg:w-full'>Find great movies easily with our Movie Finder. Get personalized suggestions for your next film night. Enjoy movie time!</p>
+    <section id='recommendation' className='text-white flex flex-col text-center lg:items-start items-center mt-24'>
+            <h3 className='mb-4 text-mindOrange text-2xl font-poppins lg:text-4xl'>COMING SOON</h3>
+            <div className='flex flex-col lg:flex-row'> 
+            <div className='flex flex-col'>
+            <div className='flex flex-col'>
+                <h1 className='text-3xl font-poppins my-4 lg:text-6xl lg:text-left'>Movie Recommendation <span className='text-mindOrange'>Engine</span></h1>
+                <p className='text-xs px-2 py-2 font-montserrat lg:text-lg lg:text-left'>Find great movies easily with our Movie Finder. Get personalized suggestions for your next film night. Enjoy movie time!</p>
             </div>
-            <div className='mt-8'>
-                <form className='space-x-2'>
-                    <input type="text" className='w-[280px] px-2 py-2  font-poppins border-2 border-black  text-sm lg:w-[400px] lg:text-lg' placeholder='Tell me something about yourself...'/>
-                    <button className='bg-mindGray text-mindWhite hover:text-white hover:bg-mindOrange px-2 py-2 duration-200 text-sm text-center lg:text-lg'>Discover</button>
+                <form className='flex flex-col w-full items-center my-2 lg:items-start'>
+                    <input type="text" className='w-3/5 px-4 py-2 text-mindBlack font-montserrat text-sm' placeholder='Tell me something about yourself...'/>
+                    <button className='bg-mindOrange px-4 py-2 my-4 font-poppins'>Discover</button>
                 </form>
             </div>
-            </div>
-            <img src={thor} alt="" className='w-full mt-20 object-contain lg:w-[800px] lg:mt-0'/>
+            <img src={thor} alt="" className='w-full mt-4 object-contain lg:w-[800px] lg:mt-0'/>
             </div>
     </section>
   )
